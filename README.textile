@@ -10,6 +10,8 @@ This template sets up a new Rails project and puts it in a Git repository while 
 
 h3. The authorization template
 
-*restful_auth.rb*
+*auth.rb*
 
-This template depends on *base.rb* and adds the restful_authentication plugin as a Git submodule.
+This template depends on *base.rb* and adds and configures the restful_authentication plugin as a Git submodule.
+
+*Note:* Remember to move the code as per the instructions in the restful_authentication README. This is about the only thing the template doesn't take care of for you.
