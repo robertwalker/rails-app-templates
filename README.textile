@@ -1,0 +1,15 @@
+h2. My set of Rails application templates
+
+Thanks for your interest in these basic Rails templates. There are a few interesting bits that I haven't seen other people doing. For example cleaning up the project and touching files used to keep Git from ignoring empty folders. These hidden zero byte files (.gitkeep) hang around inside folders that are often empty forcing Git to track them.
+
+h3. The base template
+
+*base.rb*
+
+This template sets up a new Rails project and puts it in a Git repository while taking care of all the preliminary work to prepare the project like copying the config/database.yml file to config/example_database.yml and versioning that instead of the real config file. It also generates a basic .gitignore file to cover the common Rails ignores.
+
+h3. The authorization template
+
+*restful_auth.rb*
+
+This template depends on *base.rb* and adds the restful_authentication plugin as a Git submodule.
