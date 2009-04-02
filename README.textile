@@ -1,6 +1,6 @@
 h2. My set of Rails application templates
 
-Thanks for your interest in these basic Rails templates. There are a few interesting bits that I haven't seen other people doing. For example cleaning up the project and touching files used to keep Git from ignoring empty folders. These hidden zero byte files (.gitkeep) hang around inside folders that are often empty forcing Git to track them.
+Thanks for your interest in these basic Rails templates. Some of the more interesting features are, for example, cleaning up the project and touching files used to keep Git from ignoring empty folders. These hidden zero byte files (.gitkeep) hang around inside folders that are often empty forcing Git to track them.
 
 h3. The base template
 
@@ -24,7 +24,7 @@ These templates can be used directly from GitHub. Or you may clone the repositor
 
 @rails demo -m http://cloud.github.com/downloads/robertwalker/rails-app-templates/base.rb@
 
-*Note:* If you choose to use the templates locally remember to modify the template dependencies to work for your system otherwise the templates will try to use the remote files.
+*Note:* If you choose to use the templates locally remember to modify the template dependencies to work for your system. Otherwise the templates will try to use the remote files.
 
 h3. More to come
 
