@@ -1,5 +1,5 @@
 # Depends on base.rb
-load_template "/Users/robertwalker/Source/RubyOnRails/Tools/Templates/base.rb"
+load_template "/Users/robertwalker/Source/RubyOnRails/Templates/base.rb"
 
 # Install restful_authentication plugin
 plugin 'restful_authentication', 
@@ -22,11 +22,11 @@ generate(:authenticated, *options)
 rake "db:migrate"
 
 # Setup routing
-route "map.signup  '/signup', :controller => :users,   :action => :new"
-route "map.login  '/login',  :controller => :sessions, :action => :new"
-route "map.logout '/logout', :controller => :sessions, :action => :destroy"
+route "map.signup  '/signup', :controller => 'users',   :action => 'new'"
+route "map.login  '/login',  :controller => 'sessions', :action => 'new'"
+route "map.logout '/logout', :controller => 'sessions', :action => 'destroy'"
 if (options.include?("--include-activation"))
-  route "map.activate '/activate/:activation_code', :controller => :users, :action => :activate, :activation_code => nil"
+  route "map.activate '/activate/:activation_code', :controller => 'users', :action => 'activate', :activation_code => nil"
 end
 
 # Setup observer if using aasm

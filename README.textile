@@ -15,3 +15,11 @@ h3. The authorization template
 This template depends on *base.rb* and adds and configures the restful_authentication plugin as a Git submodule.
 
 *Note:* Remember to move the code as per the instructions in the restful_authentication README. This is about the only thing the template doesn't take care of for you.
+
+h3. After installation
+
+Remember to modify the template dependencies after cloning to work for you. I don't yet know any way around having to use the full path to reference the other templates.
+
+h3. More to come
+
+Hopefully soon I'll have more templates to offer, this is just my first stab at a basic set. If you have any suggestions, or for any problems, feel free to contact me.
