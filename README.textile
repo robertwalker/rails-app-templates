@@ -16,9 +16,15 @@ This template depends on *base.rb* and adds and configures the restful_authentic
 
 *Note:* Remember to move the code as per the instructions in the restful_authentication README. This is about the only thing the template doesn't take care of for you.
 
-h3. After installation
+h3. Installation/Usage
 
-Remember to modify the template dependencies after cloning to work for you. I don't yet know any way around having to use the full path to reference the other templates.
+These templates can be used directly from GitHub. Or you may clone the repository and use them locally.
+
+*Example:*
+
+@rails demo -m http://cloud.github.com/downloads/robertwalker/rails-app-templates/base.rb@
+
+*Note:* If you choose to use the templates locally remember to modify the template dependencies to work for your system otherwise the templates will try to use the remote files.
 
 h3. More to come
 

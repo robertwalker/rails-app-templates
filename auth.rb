@@ -1,5 +1,5 @@
 # Depends on base.rb
-load_template "/Users/robertwalker/Source/RubyOnRails/Templates/base.rb"
+load_template "http://cloud.github.com/downloads/robertwalker/rails-app-templates/base.rb"
 
 # Install restful_authentication plugin
 plugin 'restful_authentication', 
