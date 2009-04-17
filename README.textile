@@ -1,6 +1,6 @@
 h2. My set of Rails application templates
 
-Thanks for your interest in these basic Rails templates. Some of the more interesting features are, for example, cleaning up the project and touching files used to keep Git from ignoring empty folders. These hidden zero byte files (.gitkeep) hang around inside folders that are often empty forcing Git to track them.
+Thanks for your interest in these basic Rails templates. Some of the more interesting features are, for example, cleaning up the project and touching files used to keep Git from ignoring empty folders. These hidden zero byte files (.gitignore) hang around inside folders that are often empty forcing Git to track them.
 
 h3. The base template
 
