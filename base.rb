@@ -19,7 +19,7 @@ run "find . -type d -empty -exec touch {}/.gitignore \\;"
 # Initialize git repository, add all created files and perform initial commit
 git :init
 git :add => "."
-git :commit => "-a -m 'Initial commit'"
+git :commit => "-a -m 'Initial commit.'"
 
 # Create the basic .gitignore file for rails projects
 file ".gitignore", <<-EOF
@@ -29,6 +29,10 @@ tmp/*
 db/*.sqlite3
 config/database.yml
 EOF
+
+# Commit the ignore file
+git :add => ".gitignore"
+git :commit => "-m 'g: Created basic git ignore list.'"
 
 # Copy config/example_database.yml to config/database.yml
 run "cp config/example_database.yml config/database.yml"
