@@ -14,7 +14,12 @@ run "rm README; echo 'TODO: Create the application README' > README.textile"
 run "mv config/database.yml config/example_database.yml"
 run "rm log/*.log"
 run "rm -rf tmp/*"
-run "find . -type d -empty -exec touch {}/.gitkeep \\;"
+run "find . -type d -empty -exec touch {}/.gitignore \\;"
+
+# Initialize git repository, add all created files and perform initial commit
+git :init
+git :add => "."
+git :commit => "-a -m 'Initial commit'"
 
 # Create the basic .gitignore file for rails projects
 file ".gitignore", <<-EOF
@@ -24,11 +29,6 @@ tmp/*
 db/*.sqlite3
 config/database.yml
 EOF
-
-# Initialize git repository, add all created files and perform initial commit
-git :init
-git :add => "."
-git :commit => "-a -m 'Initial commit'"
 
 # Copy config/example_database.yml to config/database.yml
 run "cp config/example_database.yml config/database.yml"
