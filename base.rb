@@ -32,7 +32,7 @@ EOF
 
 # Commit the ignore file
 git :add => ".gitignore"
-git :commit => "-m 'g: Created basic git ignore list.'"
+git :commit => "-m 'Created basic git ignore list.'"
 
 # Copy config/example_database.yml to config/database.yml
 run "cp config/example_database.yml config/database.yml"
