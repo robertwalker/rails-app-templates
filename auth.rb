@@ -1,5 +1,5 @@
 # Depends on base.rb
-load_template "http://cloud.github.com/downloads/robertwalker/rails-app-templates/base.rb"
+load_template "/Users/robertwalker/Source/RubyOnRails/Templates/base.rb"
 
 # Install restful_authentication plugin
 plugin 'restful_authentication', 
@@ -8,10 +8,10 @@ plugin 'restful_authentication',
 
 # Run the generator
 options = []
-options << ask("What do you want to call the user model?")
-options << ask("What do you want to call the sessions controller?")
-options << "--include-activation" if yes?("Include activation?")
-if yes?("Use AASM?")
+options << ask("What do you want to call the \"user\" model?")
+options << ask("What do you want to call the \"sessions\" controller?")
+options << "--include-activation" if yes?("Include activation? (y/n)")
+if yes?("Use AASM? (y/n)")
   options << "--aasm"
   gem "rubyist-aasm", :lib => "aasm", :version => ">=2.0.5"
 end
