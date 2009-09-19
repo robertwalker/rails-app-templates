@@ -27,6 +27,7 @@ file ".gitignore", <<-EOF
 log/*.log
 tmp/*
 db/*.sqlite3
+db/*.sqlite3-journal
 config/database.yml
 EOF
 
