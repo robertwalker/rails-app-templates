@@ -1,8 +1,8 @@
 # Configure to use rSpec, Cucumber and Webrat
 gem "webrat", :lib => false, :version => ">=0.5.3"
-gem "cucumber", :lib => false, :version => ">=0.3.104"
-gem "rspec-rails", :lib => false, :version => ">=1.2.7.1"
-gem "rspec", :lib => false, :version => ">=1.2.8"
+gem "cucumber", :lib => false, :version => ">=0.4"
+gem "rspec-rails", :lib => false, :version => ">=1.2.9"
+gem "rspec", :lib => false, :version => ">=1.2.9"
 
 # Run the rSpec generator
 generate(:rspec)
