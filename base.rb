@@ -1,11 +1,16 @@
-# Configure to use rSpec, Cucumber and Webrat
-gem "webrat", :lib => false, :version => ">=0.5.3"
-gem "cucumber", :lib => false, :version => ">=0.4"
-gem "rspec-rails", :lib => false, :version => ">=1.2.9"
-gem "rspec", :lib => false, :version => ">=1.2.9"
+# Suppress the default index.html page
+run "mv public/index.html public/_index.html"
 
-# Run the rSpec generator
+# Configure to use RSpec, Cucumber and Webrat
+gem "webrat", :lib => false, :version => ">=0.7.1", :env => "cucumber"
+gem "cucumber-rails", :lib => false, :version => ">=0.3.1", :env => "cucumber"
+gem "cucumber", :lib => false, :version => ">=0.7.2", :env => "cucumber"
+gem "rspec-rails", :lib => false, :version => ">=1.3.2", :evn => "test"
+gem "rspec", :lib => false, :version => ">=1.3.0", :evn => "test"
+
+# Run the RSpec generator
 generate(:rspec)
+generate(:cucumber, "--rspec", "--webrat")
 
 # Setup an empty README.textile
 run "rm README; echo 'TODO: Create the application README' > README.textile"
@@ -19,7 +24,7 @@ run "find . -type d -empty -exec touch {}/.gitignore \\;"
 # Initialize git repository, add all created files and perform initial commit
 git :init
 git :add => "."
-git :commit => "-a -m 'Initial commit.'"
+git :commit => "-m 'Initial commit.'"
 
 # Create the basic .gitignore file for rails projects
 file ".gitignore", <<-EOF
