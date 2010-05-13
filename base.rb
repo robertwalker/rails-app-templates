@@ -5,12 +5,12 @@ run "mv public/index.html public/_index.html"
 gem "webrat", :lib => false, :version => ">=0.7.1", :env => "cucumber"
 gem "cucumber-rails", :lib => false, :version => ">=0.3.1", :env => "cucumber"
 gem "cucumber", :lib => false, :version => ">=0.7.2", :env => "cucumber"
-gem "rspec-rails", :lib => false, :version => ">=1.3.2", :evn => "test"
-gem "rspec", :lib => false, :version => ">=1.3.0", :evn => "test"
+gem "rspec-rails", :lib => false, :version => ">=1.3.2", :env => "test"
+gem "rspec", :lib => false, :version => ">=1.3.0", :env => "test"
 
 # Run the RSpec generator
 generate(:rspec)
-generate(:cucumber, "--rspec", "--webrat")
+generate(:cucumber, "--force", "--rspec", "--webrat")
 
 # Setup an empty README.textile
 run "rm README; echo 'TODO: Create the application README' > README.textile"
